@@ -9,6 +9,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@main
+      
+#       scssのコンパイル
+#       - name: Make destination directory for compiled CSS
+#         run: mkdir -vp ./public_html/assets/css/
+      
+#       - name: Compile CSS from SCSS files
+#         uses: gha-utilities/sass-build@v0.2.9
+#         with:
+#           source: ./public_html/assets/sass/app.scss
+#           destination: ./public_html/assets/css/app.css
+        
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@2.0.0
         env:
